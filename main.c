@@ -1,16 +1,12 @@
 #include <stdio.h>
-#include <string.h>
+
+int square(int n) {
+    return n * n;
+}
 
 int main(void) {
     int n;
     scanf("%d", &n);
-
-    int somma = 0;
-    for (int i = 0; i <= n; i++) {
-        somma += i;
-    }
-
-    printf("%d\n", somma);
-
+    printf("%d\n", square(n));
     return 0;
 }
