@@ -1,18 +1,18 @@
 #include <stdio.h>
+#include <string.h>
 
 int main(void) {
-    int nums[5] = {0};
-    int best = 0;
+    char buf[100];
 
-    for (int i = 0; i < 5; i++) {
-        scanf("%d", &nums[i]);
+    fgets(buf, sizeof buf, stdin);
 
-        if (i == 0 || nums[i] > best) {
-            best = nums[i];
-        }
+    int i = 0;
+    while (buf[i] != '\n') {
+        i++;
     }
+    buf[i] = '\0';
 
-    printf("%d\n", best);
+    printf("%zu\n", strlen(buf));
 
     return 0;
 }
