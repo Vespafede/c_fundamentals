@@ -2,17 +2,19 @@
 #include <string.h>
 
 int main(void) {
-    char buf[100];
+    int n;
 
-    fgets(buf, sizeof buf, stdin);
+    scanf("%d", &n);
 
-    int i = 0;
-    while (buf[i] != '\n') {
-        i++;
+    if (n % 15 == 0) {
+        printf("FizzBuzz\n");
+    } else if (n % 3 == 0) {
+        printf("Fizz\n");
+    } else if (n % 5 == 0) {
+        printf("Buzz\n");
+    } else {
+        printf("%d\n", n);
     }
-    buf[i] = '\0';
-
-    printf("%zu\n", strlen(buf));
 
     return 0;
 }
