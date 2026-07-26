@@ -1,12 +1,18 @@
 #include <stdio.h>
 
 int main(void) {
-    int w = 0, h = 0;
+    int nums[5] = {0};
+    int best = 0;
 
-    scanf("%d", &w);
-    scanf("%d", &h);
+    for (int i = 0; i < 5; i++) {
+        scanf("%d", &nums[i]);
 
-    printf("%d\n", w * h);
+        if (i == 0 || nums[i] > best) {
+            best = nums[i];
+        }
+    }
+
+    printf("%d\n", best);
 
     return 0;
 }
