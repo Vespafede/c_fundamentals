@@ -1,12 +1,12 @@
 #include <stdio.h>
 
 int main(void) {
-    int a = 0, b = 0;
+    int w = 0, h = 0;
 
-    scanf("%d", &a);
-    scanf("%d", &b);
+    scanf("%d", &w);
+    scanf("%d", &h);
 
-    printf("%d\n", a + b);
+    printf("%d\n", w * h);
 
     return 0;
 }
