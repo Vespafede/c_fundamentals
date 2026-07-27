@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <math.h>
 
 typedef struct {
     int x, y;
@@ -12,7 +11,7 @@ int main(void) {
     Point p1 = {x1, y1};
     Point p2 = {x2, y2};
 
-    int distance = pow(p2.x - p1.x, 2) + pow(p2.y - p1.y, 2);
+    int distance = (p2.x - p1.x) * (p2.x - p1.x) + (p2.y - p1.y) * (p2.y - p1.y);
 
     printf("%d\n", distance);
 
